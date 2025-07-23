@@ -10,29 +10,36 @@
 
 ## 🎯 Overview
 
-A **lightweight, CPU-only PDF outline extractor** built in **pure Python**. Extract structured outlines from any PDF file (up to 50 pages) and generate clean, machine-readable JSON output containing headings, sections, and page numbers.
+A **lightweight, CPU-only PDF outline extractor** built for the **Adobe India Hackathon (Round 1A)**. This universal solution processes a wide range of documents — including structured reports, academic papers, flyers, and scanned PDFs — and outputs clean, structured summaries with titles, headings, and page numbers.
 
 ### ✨ Key Features
 
 - 🚀 **Fast Processing** - Processes 50-page PDFs in under 10 seconds
-- 💾 **Lightweight** - Docker image is only ~15 MB
+- 💾 **Lightweight** - Docker image optimized for size
 - 🔒 **Offline First** - No internet or external services required
 - ⚡ **CPU Only** - No GPU dependencies
 - 🐧 **Linux AMD64** - Optimized for Linux systems
 - 📦 **Docker Ready** - Easy deployment with containerization
+- 🔍 **OCR Support** - Handles scanned/image-based PDFs with Tesseract
+- 📊 **Multi-format Support** - Works with structured and unstructured PDFs
 
 ## 🛠️ Tech Stack
 
-- **Language:** Python 3.11 slim
-- **PDF Library:** pdfplumber
-- **Container:** Docker with python:3.11-slim base image
+- **Language:** Python 3.11
+- **PDF Processing:** PyMuPDF + pdfplumber
+- **OCR Engine:** Tesseract OCR + pytesseract
+- **Image Processing:** pdf2image, Pillow
+- **Container:** Docker with python:3.11-slim base
 - **Platform:** Linux AMD64
+
+---
 
 ## 📦 Input & Output
 
 ### Input
 - PDF files (≤ 50 pages)
-- Any standard PDF format
+- Any standard PDF format (structured or scanned)
+- Supports multilingual documents
 
 ### Output
 ```json
@@ -46,7 +53,7 @@ A **lightweight, CPU-only PDF outline extractor** built in **pure Python**. Extr
     },
     {
       "level": "H2",
-      "text": "1.1 Overview",
+      "text": "1.1 Overview", 
       "page": 2
     },
     {
@@ -58,6 +65,8 @@ A **lightweight, CPU-only PDF outline extractor** built in **pure Python**. Extr
 }
 ```
 
+---
+
 ## 🚀 Quick Start
 
 ### Option 1: Docker (Recommended)
@@ -67,152 +76,235 @@ A **lightweight, CPU-only PDF outline extractor** built in **pure Python**. Extr
 docker pull savyasachi2005/pdf-outline-extractor:latest
 
 # Run with volume mount
-docker run -v $(pwd):/app/data savyasachi2005/pdf-outline-extractor:latest input.pdf
+docker run -v $(pwd)/input:/app/input -v $(pwd)/output:/app/output savyasachi2005/pdf-outline-extractor:latest
 
-# Output: input.json will be created in your current directory
+# Output JSON files will be created in your output/ directory
 ```
 
 ### Option 2: Local Python
 
 ```bash
 # Clone the repository
-git clone https://github.com/Savyasachi-2005/adobe-round1a.git
-cd adobe-round1a
+git clone https://github.com/Savyasachi-2005/adobe-outline-extractor.git
+cd adobe-outline-extractor
 
 # Install dependencies
 pip install -r requirements.txt
 
+# Install system dependencies (Ubuntu/WSL)
+sudo apt update && sudo apt install tesseract-ocr poppler-utils
+
 # Run the extractor
-python pdf_extractor.py input.pdf
+python main.py
 ```
+
+---
 
 ## 🔧 Installation
 
 ### Prerequisites
 - Python 3.11+
 - Docker (optional, for containerized deployment)
-- Linux AMD64 system
+- Linux AMD64 system (recommended)
 
-### Setup
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Savyasachi-2005/adobe-round1a.git
-   cd adobe-round1a
-   ```
+### Setup Instructions
 
-2. **Install dependencies:**
-   ```bash
-   pip install pdfplumber
-   ```
+#### 1. Clone the Repository
+```bash
+git clone https://github.com/Savyasachi-2005/adobe-outline-extractor.git
+cd adobe-outline-extractor
+```
 
-3. **Run the extractor:**
-   ```bash
-   python pdf_extractor.py your_document.pdf
-   ```
+#### 2. Install Python Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+#### 3. Install System Dependencies
+
+**Ubuntu / WSL:**
+```bash
+sudo apt update
+sudo apt install tesseract-ocr poppler-utils
+```
+
+**macOS (using Homebrew):**
+```bash
+brew install tesseract poppler
+```
+
+**Windows:**
+- [Install Tesseract OCR](https://github.com/tesseract-ocr/tesseract)
+- [Install Poppler for Windows](http://blog.alivate.com.au/poppler-windows/)
+- Add both to your system `PATH`
+
+---
+
+## 📁 Project Structure
+
+```
+.
+├── main.py             # Entry point script to process all PDFs
+├── extractor.py        # Core logic for outline extraction (text + OCR fallback)
+├── requirements.txt    # Required Python packages
+├── Dockerfile          # Docker container configuration
+├── input/              # Place your input .pdf files here
+└── output/             # Extracted JSON files will be saved here
+```
+
+---
 
 ## 📖 Usage Examples
 
 ### Basic Usage
 ```bash
-# Extract outline from a PDF
-python pdf_extractor.py document.pdf
+# Place PDFs in input/ folder and run
+python main.py
 
-# Output: document.json
+# Output: JSON files created in output/ folder
 ```
 
 ### Docker Usage
 ```bash
-# Run with Docker
-docker run -v $(pwd):/app/data pdf-outline-extractor:latest document.pdf
+# Build the image
+docker build -t adobe-pdf-outline .
 
-# Batch processing multiple PDFs
-for pdf in *.pdf; do
-  docker run -v $(pwd):/app/data pdf-outline-extractor:latest "$pdf"
-done
+# Run with volume mounts
+docker run -v $(pwd)/input:/app/input -v $(pwd)/output:/app/output adobe-pdf-outline
+
+# Batch processing - all PDFs in input/ folder will be processed
 ```
+
+### API Usage
+```python
+from extractor import PDFOutlineExtractor
+
+# Initialize extractor
+extractor = PDFOutlineExtractor()
+
+# Extract outline from PDF
+outline = extractor.extract_outline('document.pdf')
+
+# Save to JSON
+import json
+with open('outline.json', 'w') as f:
+    json.dump(outline, f, indent=2)
+```
+
+---
 
 ## 🧠 How It Works
 
-1. **PDF Reading** - Uses `pdfplumber` to extract text content from PDF files
-2. **Heading Detection** - Analyzes text formatting to identify heading levels:
-   - **H1**: Uppercase text, larger font sizes
-   - **H2**: Title case text, medium font sizes  
-   - **H3**: Smaller headings, specific formatting patterns
-3. **Structure Analysis** - Builds hierarchical outline based on detected headings
-4. **JSON Generation** - Outputs structured data with titles, levels, and page numbers
+1. **PDF Analysis** - Uses PyMuPDF to extract structured text and metadata
+2. **OCR Fallback** - Applies Tesseract OCR for scanned/image-based PDFs
+3. **Heading Detection** - Analyzes text formatting using layout-based heuristics:
+   - **Font Size Analysis** - Larger fonts indicate higher-level headings
+   - **Line Positioning** - Spacing and alignment patterns
+   - **Text Formatting** - Bold, uppercase, and style variations
+4. **Structure Building** - Creates hierarchical outline (H1, H2, H3)
+5. **JSON Output** - Generates clean, structured data with page numbers
+
+---
 
 ## 📊 Performance Benchmarks
 
 | Metric | Performance |
 |--------|-------------|
-| **50-page PDF Processing** | < 10 seconds |
-| **Docker Image Size** | ~15 MB |
-| **Memory Usage** | < 100 MB |
+| **50-page PDF Processing** | ≤ 10 seconds |
+| **Model Size** | < 200 MB |
+| **Memory Usage** | < 200 MB |
 | **CPU Requirements** | Single core sufficient |
 | **Offline Capability** | ✅ Full offline operation |
+| **OCR Support** | ✅ Multilingual via Tesseract |
 
-## 🐳 Docker Build
+---
 
-```bash
-# Build the Docker image
-docker build -t pdf-outline-extractor .
-
-# Run the container
-docker run -v $(pwd):/app/data pdf-outline-extractor input.pdf
-```
+## 🐳 Docker Configuration
 
 ### Dockerfile
 ```dockerfile
 FROM python:3.11-slim
 
+RUN apt update && apt install -y tesseract-ocr poppler-utils
+
 WORKDIR /app
+COPY . /app
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
-COPY pdf_extractor.py .
+ENV INPUT_DIR=/app/input
+ENV OUTPUT_DIR=/app/output
 
-VOLUME ["/app/data"]
-
-ENTRYPOINT ["python", "pdf_extractor.py"]
+CMD ["python", "main.py"]
 ```
 
-## 🔍 API Reference
-
-### Command Line Interface
+### Build and Run
 ```bash
-python pdf_extractor.py [OPTIONS] INPUT_FILE
+# Build the Docker image
+docker build -t adobe-pdf-outline .
 
-Arguments:
-  INPUT_FILE    Path to the PDF file to process
-
-Options:
-  -h, --help    Show help message
-  -v, --verbose Enable verbose output
-  -o, --output  Specify output JSON file name
+# Run the container
+docker run -v $(pwd)/input:/app/input -v $(pwd)/output:/app/output adobe-pdf-outline
 ```
 
-### Python Module
-```python
-from pdf_extractor import extract_outline
+---
 
-# Extract outline from PDF
-outline = extract_outline('document.pdf')
+## 📋 Requirements
 
-# Save to JSON
-with open('outline.json', 'w') as f:
-    json.dump(outline, f, indent=2)
 ```
+PyMuPDF>=1.23.0
+pytesseract>=0.3.10
+pdf2image>=3.1.0
+Pillow>=10.0.0
+numpy>=1.24.0
+```
+
+---
+
+## ✅ Adobe Hackathon Constraints (Satisfied)
+
+| Constraint | Support | Status |
+|------------|---------|--------|
+| CPU-only | ✅ Yes | No GPU dependencies |
+| Model size < 200 MB | ✅ Yes | Lightweight libraries only |
+| No Internet required | ✅ Yes | Fully offline operation |
+| Execution ≤ 10s per PDF (50 pages) | ✅ Tested | Optimized processing |
+| Multilingual / image PDFs | ✅ Supported | Via OCR integration |
+
+---
 
 ## 🧪 Testing
 
-```bash
-# Run tests
-python -m pytest tests/
+### Sample Output
+**Input File:** `TOPJUMP-PARTY-INVITATION-20161003-V01.pdf`  
+**Output File:** `output/TOPJUMP-PARTY-INVITATION-20161003-V01.json`
 
-# Test with sample PDFs
-python pdf_extractor.py tests/samples/sample.pdf
+```json
+{
+  "title": "HOPE To SEE You THERE!",
+  "outline": [
+    { "text": "ADDRESS:", "level": "H3", "page": 1 },
+    { "text": "TOPJUMP", "level": "H3", "page": 1 },
+    { "text": "3735 PARKWAY", "level": "H1", "page": 1 },
+    { "text": "PIGEON FORGE, TN 37863", "level": "H3", "page": 1 },
+    { "text": "RSVP: ----------------", "level": "H1", "page": 1 },
+    { "text": "PLEASE VISIT TOPJUMP.COM TO FILL OUT WAIVER", "level": "H2", "page": 1 },
+    { "text": "HOPE To SEE You THERE!", "level": "H1", "page": 1 },
+    { "text": "WWW.TOPJUMP.COM", "level": "H2", "page": 1 }
+  ]
+}
 ```
+
+---
+
+## 🐛 Known Limitations
+
+- Maximum 50 pages per PDF (Adobe constraint)
+- Heading detection based on heuristic patterns
+- OCR accuracy depends on image quality
+- Optimized for Linux AMD64 platform
+
+---
 
 ## 🤝 Contributing
 
@@ -222,22 +314,18 @@ python pdf_extractor.py tests/samples/sample.pdf
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📋 Requirements
-
-```
-pdfplumber>=0.9.0
-```
-
-## 🐛 Known Limitations
-
-- Maximum 50 pages per PDF
-- Works best with structured documents
-- Heading detection based on formatting patterns
-- Linux AMD64 platform only
+---
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+---
+
+## ✉️ Contact
+
+Feel free to raise an issue or drop a message if you have questions or feature requests. Good luck hacking! 🚀
+
+---
 
 *Built with ❤️ for Adobe Hackathon 2025*
