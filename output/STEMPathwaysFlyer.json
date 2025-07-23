@@ -1,160 +1,615 @@
 {
-  "title": "PATHWAY OPTIONS",
-  "outline": [
+  "title":"Parsippany -Troy Hills STEM Pathways",
+  "outline":[
     {
-      "level": "H2",
-      "text": "Parsippany -Troy Hills STEM Pathways",
-      "page": 1
+      "text":"Parsippany -Troy Hills STEM Pathways",
+      "level":"H1",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "Elective Course Offerings",
-      "page": 2
+      "text":"Mission Statement:  To provide PTHSD high school students with the opportunity to",
+      "level":"H1",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "ScienceMathComputer Science/ ArtApplied",
-      "page": 1
+      "text":"concentrate their studies, beyond those required in high school, in the areas of science,",
+      "level":"H1",
+      "page":1
     },
     {
-      "level": "H3",
-      "text": "Mission Statement:",
-      "page": 1
+      "text":"technology, engineering, and mathematics, and expose students to relevant real world",
+      "level":"H1",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "TechnologyTechnology/",
-      "page": 2
+      "text":"experiences through project work, conferences and presentations to enhance their high school",
+      "level":"H1",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "Family Consumer",
-      "page": 2
+      "text":"experience.",
+      "level":"H1",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "Science and Other",
-      "page": 2
+      "text":"PATHWAY OPTIONS",
+      "level":"H1",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "+",
-      "page": 2
+      "text":"REGULAR PATHWAY",
+      "level":"H1",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "+",
-      "page": 2
+      "text":"4 credits of Math",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "+",
-      "page": 2
+      "text":"4 credits of Science",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H3",
-      "text": "Goals:",
-      "page": 1
+      "text":"4 credits of STEM-designated electives",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "+",
-      "page": 2
+      "text":"Maintain an overall 2.85 GPA",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "Economics***AP",
-      "page": 2
+      "text":"Participate in a minimum of 3 STEM",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "•Business Captsone -",
-      "page": 2
+      "text":"presentations/conferences each year",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "Org. Seminar and",
-      "page": 2
+      "text":"with a required minimum total of 12",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "FilmsManagementResearch w/",
-      "page": 2
+      "text":"presentations/conferences throughout",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "advisor",
-      "page": 2
+      "text":"the 4 years. *",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "approval",
-      "page": 2
+      "text":"Join and actively participate in a",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H1",
-      "text": "PATHWAY OPTIONS",
-      "page": 1
+      "text":"STEM-related extracurricular activity or",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H1",
-      "text": "REGULAR PATHWAYDISTINCTION PATHWAY",
-      "page": 1
+      "text":"club every year of attendance. -",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "What Colleges Say!",
-      "page": 2
+      "text":"DISTINCTION PATHWAY",
+      "level":"H1",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "When asked the question,  “Would participation in the Drew University: “Yes,it would show that they are",
-      "page": 2
+      "text":"4 credits of Math - At least one math",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "STEM Pathways set PTHSD students apart when applying challenging themselves in the classroom.”",
-      "page": 2
+      "text":"course should be an AP Math class.",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "to your school?”, colleges responded with the following:",
-      "page": 2
+      "text":"4 credits of Science- At least one",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "NJIT: “Yes- this would demonstrate to Admissions that a",
-      "page": 2
+      "text":"science course should be an AP",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "SUNY Binghamton:  “Yes. We are a R1 research institution student is interested in STEM programs, and would be a",
-      "page": 2
+      "text":"Science class.",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "applicant pool and more success as students at Ithaca College:  “Yes, we look for students who participate",
-      "page": 2
+      "text":"4 credits of STEM-designated electives",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "the 4 years. *",
-      "page": 1
+      "text":"- One must be a Computer",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "Towson University: “Participation in this program would",
-      "page": 2
+      "text":"Science/Technology Class",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "show us that the student is challenging him/herself in their Montclair University:  “Rigorous math and science lab",
-      "page": 2
+      "text":"Maintain an overall 3.5 GPA",
+      "level":"H2",
+      "page":1
     },
     {
-      "level": "H2",
-      "text": "For more information and our application please visit our website by clicking here.",
-      "page": 2
+      "text":"Participate in a minimum of 3 STEM",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"presentations/conferences a year with a",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"required minimum total of 12",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"presentations/conferences throughout",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"the 4 years.",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"Join and actively participate in a",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"STEM-related extracurricular activity or",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"club every year of attendance.",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"Either participate in an internship or",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"design and implement a community",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"impact project.",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"Goals:",
+      "level":"H1",
+      "page":1
+    },
+    {
+      "text":"• Inspire keen interest in mathematics, science, engineering, and",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"technology, develop strong scholarship in the subject and",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"promote the enjoyment of these studies in high school.",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"• Expose students to potential career opportunities in the field.",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"• Encourage students to pursue higher education and major in",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"STEM careers.",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"• Promote interactions with STEM professionals to learn about",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"future opportunities.",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"• Support field experiences connected to the world outside of",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"the school building.",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"• Signal to employers, universities, training programs, and",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"military that a student has completed a comprehensive course",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"of study in a specialized area.",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"• Cultivate transferable work habits such as perseverance, goal",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"setting, and self-direction.",
+      "level":"H2",
+      "page":1
+    },
+    {
+      "text":"Elective Course Offerings",
+      "level":"H1",
+      "page":2
+    },
+    {
+      "text":"Science",
+      "level":"H1",
+      "page":2
+    },
+    {
+      "text":"Math",
+      "level":"H1",
+      "page":2
+    },
+    {
+      "text":"Computer Science/",
+      "level":"H1",
+      "page":2
+    },
+    {
+      "text":"Technology",
+      "level":"H1",
+      "page":2
+    },
+    {
+      "text":"Art",
+      "level":"H1",
+      "page":2
+    },
+    {
+      "text":"Applied",
+      "level":"H1",
+      "page":2
+    },
+    {
+      "text":"Technology/",
+      "level":"H1",
+      "page":2
+    },
+    {
+      "text":"Family Consumer",
+      "level":"H1",
+      "page":2
+    },
+    {
+      "text":"Science and Other",
+      "level":"H1",
+      "page":2
+    },
+    {
+      "text":"AP Biology",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"AP Chemistry",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"AP Physics C",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Forensics",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Honors Anatomy",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"and Physiology",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"AP Environmental",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Science",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Marine Biology",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Organic Chemistry",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Genetics",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Astronomy",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Bioethics",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"MythBusting: The",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Science of",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Literature and",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Films",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Computer",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Programming in C++",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Robotics",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Computer Science and",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Programming Concepts",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"with Python",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"AP Computer Science",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Principles",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"AP Computer Science A",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Honors Data Structures",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"and Advanced",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Programming",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"***AP",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"For more information and our application please visit our website by clicking here.",
+      "level":"H1",
+      "page":2
+    },
+    {
+      "text":"What Colleges Say!",
+      "level":"H1",
+      "page":2
+    },
+    {
+      "text":"When asked the question,  “Would participation in the",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"STEM Pathways set PTHSD students apart when applying",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"to your school?”, colleges responded with the following:",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"SUNY Binghamton:  “Yes. We are a R1 research institution",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"and students with a strong STEM curriculum that includes",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"research or lab work are generally more competitive in our",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"applicant pool and more success as students at",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Binghamton because of their early HS experience.”",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Towson University: “Participation in this program would",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"show us that the student is challenging him/herself in their",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"courses which is something we look at when reviewing",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"applications.”",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Drew University: “Yes,it would show that they are",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"challenging themselves in the classroom.”",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"NJIT: “Yes- this would demonstrate to Admissions that a",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"student is interested in STEM programs, and would be a",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"strong candidate for our programs.”",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Ithaca College:  “Yes, we look for students who participate",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"in classes and activities that enhance their knowledge and",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"skills in their area of interest.”",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"Montclair University:  “Rigorous math and science lab",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"classes beyond standard curriculum could be looked at for",
+      "level":"H2",
+      "page":2
+    },
+    {
+      "text":"scholarship eligibility along with high GPA.”",
+      "level":"H2",
+      "page":2
     }
   ]
 }
